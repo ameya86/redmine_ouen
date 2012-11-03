@@ -1,0 +1,11 @@
+<%# "応援！"を有効にする %>
+<p>
+  <label><%= l(:field_ouen_good) + l(:field_ouen_enabled) %></label>
+  <%= check_box_tag('settings[good_enabled]', '1', '1' == @settings['good_enabled'].to_s) %>
+</p>
+
+<%# "頑張れ"を有効にする %>
+<p>
+  <label><%= l(:field_ouen_more) + l(:field_ouen_enabled) %></label>
+  <%= check_box_tag('settings[more_enabled]', '1', '1' == @settings['more_enabled'].to_s) %>
+</p>

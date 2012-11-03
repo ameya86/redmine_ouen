@@ -1,0 +1,24 @@
+<%# "応援！"と"頑張れ"のカウントを表示する %>
+<tr>
+  <th><%= l(:field_ouen_good) %></th>
+  <td class="ouen_good">
+  <% if User.current.logged? %>
+    <%= link_to(issue.ouen_good.count,
+                  {:controller => 'ouens', :action => 'good', :content_type => 'issue', :content_id => issue.id},
+                  :method => :post, :confirm => l(:text_ouen_good_post))
+ %>
+  <% else %>
+    <%= issue.ouen_good.count %>
+  <% end %>
+  </td>
+  <th><%= l(:field_ouen_more) %></th>
+  <td class="ouen_more">
+  <% if User.current.logged? %>
+    <%= link_to(issue.ouen_more.count,
+                  {:controller => 'ouens', :action => 'more', :content_type => 'issue', :content_id => issue.id},
+                  :method => :post, :confirm => l(:text_ouen_more_post)) %>
+  <% else %>
+    <%= issue.ouen_more.count %>
+  <% end %>
+  </td>
+</tr>

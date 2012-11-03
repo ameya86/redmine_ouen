@@ -1,0 +1,41 @@
+= Redmine Ouen
+
+いわゆる「いいね！」する機能を追加します。
+チケットが対象です。
+
+動作確認はRedmine2.1.0、CentOS6.2、Apache + Passenger、Ruby1.8.7、FireFox + Google Chromeで行っています。
+
+
+== インストール
+
+1. RAILS_ROOT/pluginsに配置する。
+
+2. RAILS_ROOT/plugins/redmine_ouen/config/locales/ja.ymlを開き
+   field_ouen_good, field_ouen_more, text_ouen_good_post, text_ouen_more_post
+   の文章を好きな言葉に変更する。（いわゆる「いいね！」など）
+
+3. Redmineを再起動する。
+
+
+== アンインストール
+
+1. RAILS_ROOT/pluginsから削除する。
+
+2. Redmineを再起動する。
+
+
+== 備考
+
+アイコンなどの装飾を付けたい場合は
+Redmineのスタイルシートに自力で追加してください。
+"応援！"は .issue td.ouen_good
+"頑張れ"は ,issue td.ouen_more
+などのセレクタで指定できるはずです。
+
+
+== 更新履歴
+
+=== Version 0.0.1
+
+初回リリース。
+自己責任版です。

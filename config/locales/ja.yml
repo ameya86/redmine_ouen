@@ -1,0 +1,9 @@
+# 使用する言葉は好きな言葉に置き換えてください
+ja:
+  field_ouen_good: "応援！"
+  field_ouen_more: "頑張れ"
+
+  field_ouen_enabled: 'を有効にする'
+
+  text_ouen_good_post: '"応援！"しますか？'
+  text_ouen_more_post: '"頑張れ"しますか？'
